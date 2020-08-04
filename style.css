@@ -3,6 +3,10 @@ h1{
     color: rgb(63, 122, 190);
     
 }
+.container{
+    font: 24px;
+    color:  rgb(63, 122, 190);
+}
 .photo{
     text-align: center;
     
