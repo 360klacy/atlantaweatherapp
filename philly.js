@@ -3,7 +3,7 @@ var APIKey = "&appid=398ac92332e1236488fe33bed85d44d3";
 
 
 // Here we are building the URL we need to query the database
-var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Houston,&appid=398ac92332e1236488fe33bed85d44d3";
+var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Philadelphia,&appid=398ac92332e1236488fe33bed85d44d3";
 console.log(queryURL);
 
 // Here we run our AJAX call to the OpenWeatherMap API
@@ -25,12 +25,12 @@ $.ajax({
      // Convert the temp to fahrenheit
      var tempF = (response.main.temp - 273.15) * 1.80 + 32;
      var feelF = (response.main.feels_like - 273.15) * 1.80 + 32;
-
+     
      // add temp content to html
     //  $(".temp").text("Temperature (K) " + response.main.temp);
      $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
      $(".feel").text("Feels Like(F): " + feelF.toFixed(2));
-     
+
      var temp = ("Temperature (F) " + tempF.toFixed(2));
      var city = (response.name + " Current Weather");
      var humidity = ("Humidity: " + response.main.humidity);
