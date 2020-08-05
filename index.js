@@ -19,8 +19,8 @@ $.ajax({
     console.log(response);
 
     $(".city").html("<h1>" + response.name + " Current Weather</h1>");
-    $(".humidity").text("Humidity: " + response.main.humidity);
-    $(".wind").text("Wind Speed: " + response.wind.speed);
+    $(".humidity").text("Humidity: " + response.main.humidity + "%");
+    $(".wind").text("Wind Speed: " + response.wind.speed + "mph");
 
      // Convert the temp to fahrenheit
      var tempF = (response.main.temp - 273.15) * 1.80 + 32;
@@ -30,7 +30,7 @@ $.ajax({
     //  $(".temp").text("Temperature (K) " + response.main.temp);
      $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
      $(".feel").text("Feels Like(F): " + feelF.toFixed(2));
-     
+
      var temp = ("Temperature (F) " + tempF.toFixed(2));
      var city = (response.name + " Current Weather");
      var humidity = ("Humidity: " + response.main.humidity);

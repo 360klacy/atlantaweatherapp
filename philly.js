@@ -19,13 +19,13 @@ $.ajax({
     console.log(response);
 
     $(".city").html("<h1>" + response.name + " Current Weather</h1>");
-    $(".humidity").text("Humidity: " + response.main.humidity);
-    $(".wind").text("Wind Speed: " + response.wind.speed);
+    $(".humidity").text("Humidity: " + response.main.humidity + "%");
+    $(".wind").text("Wind Speed: " + response.wind.speed + "mph");
 
      // Convert the temp to fahrenheit
      var tempF = (response.main.temp - 273.15) * 1.80 + 32;
      var feelF = (response.main.feels_like - 273.15) * 1.80 + 32;
-     
+
      // add temp content to html
     //  $(".temp").text("Temperature (K) " + response.main.temp);
      $(".tempF").text("Temperature (F) " + tempF.toFixed(2));
